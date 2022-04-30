@@ -1,6 +1,6 @@
 ﻿<?php
 
-define('BOT_TOKEN', 'Your Token');
+define('BOT_TOKEN', '5360550790:AAGnl-THxsRj-WNXBTDSAbpi4fuXxL9shpk');
 define('API_URL', 'https://api.telegram.org/bot'.BOT_TOKEN.'/');
 
 function apiRequestWebhook($method, $parameters) {
@@ -165,7 +165,7 @@ function inlineMessage($inline){
 	$chat_id=$inline['from']['id'];
 	$query=$inline['query'];
 	
-	//apiRequest("sendMessage",array("chat_id"=>111825543,"text"=>json_encode($inline['from'])));
+	//apiRequest("sendMessage",array("chat_id"=>2031621826,"text"=>json_encode($inline['from'])));
 	apiRequest("answerInlineQuery",array("inline_query_id"=>$id,"results"=>array(array("type"=>"article","id"=>$query,"title"=>"بازی XO","input_message_content"=>array("message_text"=>"<b>بازی XO</b>\n برای شروع روی دگمه زیر کلیک کنید👇🏻👇🏻👇🏻","parse_mode"=>"HTML","disable_web_page_preview"=>false),
 	    "reply_markup"=>array(
 	        "inline_keyboard"=>array(
@@ -227,7 +227,7 @@ function callbackMessage($callback){
 		  exit;
 	  }
 	  else{
-		   //apiRequest("sendMessage",array("chat_id"=>111825543,"text"=>$data));
+		   //apiRequest("sendMessage",array("chat_id"=>2031621826,"text"=>$data));
 		  $data=explode("_",$data);
 		  $a=explode(".",$data[0]);
 		  $i=$a[0]; $j=$a[1];
@@ -322,7 +322,7 @@ function callbackMessage($callback){
 					    exit;
 				    }
 				    else{
-				        //apiRequest("sendMessage",array("chat_id"=>111825543,"text"=>Win($Tab)));
+				        //apiRequest("sendMessage",array("chat_id"=>2031621826,"text"=>Win($Tab)));
 						//$winner=Win($Tab);
                         //apiRequest("answerCallbackQuery",array('callback_query_id'=>$callback_id,'text'=>Win($Tab),'show_alert'=>false));						
 						
@@ -337,7 +337,7 @@ function callbackMessage($callback){
 						
 						$Tab[3][0]["text"]="ترک بازی!";
 			            $Tab[3][0]["callback_data"]="Left";
-                        //apiRequest("sendMessage",array("chat_id"=>111825543,"text"=>json_encode($Tab)));						
+                        //apiRequest("sendMessage",array("chat_id"=>2031621826,"text"=>json_encode($Tab)));						
 						//Tab
 						
 						$NextTurn=getChat($NextTurn);
@@ -353,7 +353,7 @@ function callbackMessage($callback){
 			exit;
 		}
 	}
-	  //apiRequest("sendMessage",array("chat_id"=>111825543,"text"=>$data));
+	  //apiRequest("sendMessage",array("chat_id"=>2031621826,"text"=>$data));
 }
 
 
